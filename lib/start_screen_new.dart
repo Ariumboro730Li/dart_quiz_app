@@ -13,8 +13,11 @@ class StartScreenNew extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset('assets/images/quiz-logo.png', width: 400),
-            const SizedBox(height: 30),
+            Opacity(
+              opacity: 0.6,
+              child: Image.asset('assets/images/quiz-logo.png', width: 400),
+            ),
+            const SizedBox(height: 80),
             Text(
               'Learn Flutter the fun way!',
               style: TextStyle(
@@ -24,6 +27,7 @@ class StartScreenNew extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
+            const SizedBox(height: 40),
             OutlinedButton.icon(
               onPressed: (){}, 
               style: OutlinedButton.styleFrom(
