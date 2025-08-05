@@ -8,21 +8,23 @@ class StartScreenNew extends StatelessWidget {
     return Container(
       width: double.infinity, // biar full screen
       height: double.infinity,
-      color: const Color.fromARGB(255, 33, 33, 33),
+      color: const Color.fromARGB(255, 130, 1, 181),
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Opacity(
-              opacity: 0.6,
-              child: Image.asset('assets/images/quiz-logo.png', width: 400),
+            Image.asset(
+              'assets/images/quiz-logo.png', 
+              width: 400,
+              color: const Color.fromARGB(155, 246, 246, 246),
+              // opacity: const AlwaysStoppedAnimation(.6),
             ),
             const SizedBox(height: 80),
             Text(
               'Learn Flutter the fun way!',
               style: TextStyle(
                 fontSize: 24,
-                color: Colors.white,
+                color: const Color.fromARGB(255, 246, 246, 246),
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
