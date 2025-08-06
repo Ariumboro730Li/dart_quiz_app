@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/styled_text.dart';
 
 class StartScreenNew extends StatelessWidget {
-  const StartScreenNew({super.key});
+  const StartScreenNew(this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
+
   @override
   Widget build(context) {
     return Container(
@@ -28,10 +30,10 @@ class StartScreenNew extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
-            ),
+            ), 
             const SizedBox(height: 40),
             OutlinedButton.icon(
-              onPressed: (){}, 
+              onPressed: startQuiz,
               style: OutlinedButton.styleFrom(
                 // backgroundColor: const Color.fromARGB(255, 175, 10, 10),
                 foregroundColor: Colors.white,
